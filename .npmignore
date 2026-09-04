@@ -1,0 +1,8 @@
+.github/
+examples/
+test/
+.env.example
+.gitignore
+.pre-commit-config.yaml
+eslint.config.js
+Makefile

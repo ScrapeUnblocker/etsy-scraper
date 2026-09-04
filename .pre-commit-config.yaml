@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: eslint
+        name: eslint
+        entry: npx eslint
+        language: system
+        types: [javascript]
+        pass_filenames: false
+      - id: node-test
+        name: node --test
+        entry: node --test
+        language: system
+        pass_filenames: false

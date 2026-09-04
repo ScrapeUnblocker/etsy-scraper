@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# environment
+.env
+
+# build / logs
+dist/
+build/
+*.log
+npm-debug.log*
+
+# scraper output
+*.csv
+*.json
+!package.json
+!package-lock.json
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/

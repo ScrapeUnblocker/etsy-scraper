@@ -1,0 +1,51 @@
+{
+  "name": "etsy-scraper",
+  "version": "0.1.0",
+  "description": "Scrape Etsy search listings as clean JSON via the ScrapeUnblocker getPageSource parsed_data API - CLI + Node library.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "bin": {
+    "etsy-scraper": "bin/etsy-scraper.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node bin/etsy-scraper.js",
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "test": "node --test"
+  },
+  "keywords": [
+    "etsy",
+    "etsy-scraper",
+    "web-scraping",
+    "scraper",
+    "scrapeunblocker",
+    "parsed-data",
+    "ecommerce",
+    "marketplace"
+  ],
+  "author": "ScrapeUnblocker",
+  "license": "MIT",
+  "homepage": "https://scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScrapeUnblocker/etsy-scraper.git"
+  },
+  "dependencies": {
+    "scrapeunblocker": "^0.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  }
+}
