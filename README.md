@@ -11,7 +11,7 @@ multi-page collection and CSV export. A small CLI and a Node library.
 > **Powered by [ScrapeUnblocker](https://scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos).**
 > Etsy renders search results with heavy client-side JavaScript and anti-bot
 > protection. This project uses the ScrapeUnblocker
-> [`getPageSource`](https://developers.scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos)
+> [`getPageSource`](https://docs.scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos)
 > endpoint with `parsed_data`, which returns AI-parsed JSON — so there is no
 > HTML parsing to maintain when Etsy changes its markup.
 
@@ -156,7 +156,7 @@ page cap is reached.
 ## Links
 
 - 🌐 [ScrapeUnblocker](https://scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos)
-- 📚 [API documentation](https://developers.scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos)
+- 📚 [API documentation](https://docs.scrapeunblocker.com/?utm_source=github&utm_medium=integration&utm_campaign=example-repos)
 - 📦 [`scrapeunblocker` on npm](https://www.npmjs.com/package/scrapeunblocker)
 
 ## License
