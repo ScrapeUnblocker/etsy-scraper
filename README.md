@@ -113,6 +113,10 @@ Each listing is normalized to a flat record:
 > Note: Etsy sometimes returns a numeric price with a `null` currency. `price`
 > is the best available *current* price (the sale price when present, otherwise
 > the original price); `salePrice` and `originalPrice` are kept separately.
+> Depending on which part of the page the API reads, a listing's price arrives
+> either as `sale_price` / `original_price` (the listing cards) or as a single
+> `price` plus a `currency` code (the page's schema.org data); both are handled,
+> so the record above looks the same either way.
 
 ## Project layout
 

@@ -26,6 +26,32 @@ test("pickPrice prefers the sale price and falls back to original", () => {
   );
 });
 
+test("pickPrice reads the single schema.org price shape", () => {
+  // Same search, read from the page's schema.org data instead of the cards.
+  assert.deepEqual(
+    pickPrice({ price: { value: 31.5, currency: null }, currency: "USD" }),
+    { price: 31.5, salePrice: 31.5, originalPrice: null, currency: "USD" },
+  );
+  assert.deepEqual(
+    pickPrice({ price: "$1,031.50", currency: "usd" }),
+    { price: 1031.5, salePrice: 1031.5, originalPrice: null, currency: "USD" },
+  );
+});
+
+test("pickPrice keeps the card price ahead of the single price", () => {
+  assert.deepEqual(
+    pickPrice({ sale_price: { value: 58, currency: null }, price: { value: 99, currency: null }, currency_symbol: "$" }),
+    { price: 58, salePrice: 58, originalPrice: null, currency: null },
+  );
+});
+
+test("normalizeItem gives the same record for both price shapes", () => {
+  const card = normalizeItem({ title: "Mug", shop_name: "Pottery", sale_price: { value: 31.5, currency: null } });
+  const schema = normalizeItem({ title: "Mug", shop_name: "Pottery", price: { value: 31.5, currency: null } });
+  assert.deepEqual(schema, card);
+  assert.equal(card.price, 31.5);
+});
+
 test("normalizeItem produces a flat, stable record", () => {
   const record = normalizeItem({
     title: "Handmade Leather Wallet",
